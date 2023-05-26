@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>welcome</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
-        sapiente? Ratione aspernatur unde, repellat obcaecati consequuntur error
-        harum vel? Ratione maiores placeat natus iste quos inventore numquam
-        incidunt, vitae totam?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
-        sapiente? Ratione aspernatur unde, repellat obcaecati consequuntur error
-        harum vel? Ratione maiores placeat natus iste quos inventore numquam
-        incidunt, vitae totam?
-      </p>
-      <a href="#">Read more...</a>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="change()">click me</button>
+  <script>
+    let isgreen=true;
+    let iscolor=true;
+    let i=0;
+    function change() {
+      let colors=["green", "brown", "red","blue","#3232"];
+      let body=document.querySelector('body');
+      if(iscolor){
+        if(i>colors.length){
+          i=0;
+        }
+        body.style.backgroundColor=colors[i];
+        i++;
+        iscolor=false;
+
+        
+      } else{
+        if(i>colors.length){
+          i=0;
+        }
+        body.style.backgroundColor=colors[i];
+        i++;
+        iscolor=true;
+           
+      }
+       
+     }
+
+  </script>
+</body>
 </html>
